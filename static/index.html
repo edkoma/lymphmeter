@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="main">
+    <h1>Lymphmeter</h1>
+    <p>Caution: This is a prediction we received using models that had previous patients data as inputs. The predictions might not be accurate and does have error. Please do consult the doctor if you experience any of the symptoms.</p>
+    <p>Please input your symptom range:</p>
+    <div>
+        <form>
+            <ol>
+                <li class="question">Pain:</li>
+                <ul class="answers">
+                <input type="radio" name="q1" value="0" id="q10"><label for="q10">None</label><br/>
+                <input type="radio" name="q1" value="1" id="q11"><label for="q11">A Little</label><br/>
+                <input type="radio" name="q1" value="2" id="q12"><label for="q12">Somewhat</label><br/>
+                <input type="radio" name="q1" value="3" id="q13"><label for="q13">Quite a bit</label><br/>
+                <input type="radio" name="q1" value="4" id="q14"><label for="q14">Very Severe</label><br/>
+                </ul>
+                <li class="question">Soreness:</li>
+                <ul class="answers">
+                <input type="radio" name="q2" value="0" id="q20"><label for="q20">None</label><br/>
+                <input type="radio" name="q2" value="1" id="q21"><label for="q21">A Little</label><br/>
+                <input type="radio" name="q2" value="2" id="q22"><label for="q22">Somewhat</label><br/>
+                <input type="radio" name="q2" value="3" id="q23"><label for="q23">Quite a bit</label><br/>
+                <input type="radio" name="q2" value="4" id="q24"><label for="q24">Very Severe</label><br/>
+                </ul>
+                <li class="question">Aching:</li>
+                <ul class="answers">
+                <input type="radio" name="q3" value="0" id="q30"><label for="q30">None</label><br/>
+                <input type="radio" name="q3" value="1" id="q31"><label for="q31">A Little</label><br/>
+                <input type="radio" name="q3" value="2" id="q32"><label for="q32">Somewhat</label><br/>
+                <input type="radio" name="q3" value="3" id="q33"><label for="q33">Quite a bit</label><br/>
+                <input type="radio" name="q3" value="4" id="q34"><label for="q34">Very Severe</label><br/>
+                </ul>
+                <li class="question">Tenderness:</li>
+                <ul class="answers">
+                <input type="radio" name="q4" value="0" id="q40"><label for="q40">None</label><br/>
+                <input type="radio" name="q4" value="1" id="q41"><label for="q41">A Little</label><br/>
+                <input type="radio" name="q4" value="2" id="q42"><label for="q42">Somewhat</label><br/>
+                <input type="radio" name="q4" value="3" id="q43"><label for="q43">Quite a bit</label><br/>
+                <input type="radio" name="q4" value="4" id="q44"><label for="q44">Very Severe</label><br/>
+                </ul>
+                <li class="question">Hand Swelling:</li>
+                <ul class="answers">
+                <input type="radio" name="q5" value="0" id="q50"><label for="q50">None</label><br/>
+                <input type="radio" name="q5" value="1" id="q51"><label for="q51">A Little</label><br/>
+                <input type="radio" name="q5" value="2" id="q52"><label for="q52">Somewhat</label><br/>
+                <input type="radio" name="q5" value="3" id="q53"><label for="q53">Quite a bit</label><br/>
+                <input type="radio" name="q5" value="4" id="q54"><label for="q54">Very Severe</label><br/>
+                </ul>
+                <li class="question">Brest Swelling:</li>
+                <ul class="answers">
+                <input type="radio" name="q6" value="0" id="q60"><label for="q60">None</label><br/>
+                <input type="radio" name="q6" value="1" id="q61"><label for="q61">A Little</label><br/>
+                <input type="radio" name="q6" value="2" id="q62"><label for="q62">Somewhat</label><br/>
+                <input type="radio" name="q6" value="3" id="q63"><label for="q63">Quite a bit</label><br/>
+                <input type="radio" name="q6" value="4" id="q64"><label for="q64">Very Severe</label><br/>
+                </ul>
+                <li class="question">Chest wall swelling:</li>
+                <ul class="answers">
+                <input type="radio" name="q7" value="0" id="q70"><label for="q70">None</label><br/>
+                <input type="radio" name="q7" value="1" id="q71"><label for="q71">A Little</label><br/>
+                <input type="radio" name="q7" value="2" id="q72"><label for="q72">Somewhat</label><br/>
+                <input type="radio" name="q7" value="3" id="q73"><label for="q73">Quite a bit</label><br/>
+                <input type="radio" name="q7" value="4" id="q74"><label for="q74">Very Severe</label><br/>
+                </ul>
+                <li class="question">Firmness:</li>
+                <ul class="answers">
+                <input type="radio" name="q8" value="0" id="q80"><label for="q80">None</label><br/>
+                <input type="radio" name="q8" value="1" id="q81"><label for="q81">A Little</label><br/>
+                <input type="radio" name="q8" value="2" id="q82"><label for="q82">Somewhat</label><br/>
+                <input type="radio" name="q8" value="3" id="q83"><label for="q83">Quite a bit</label><br/>
+                <input type="radio" name="q8" value="4" id="q84"><label for="q84">Very Severe</label><br/>
+                </ul>
+                <li class="question">Tightness:</li>
+                <ul class="answers">
+                <input type="radio" name="q9" value="0" id="q90"><label for="q90">None</label><br/>
+                <input type="radio" name="q9" value="1" id="q91"><label for="q91">A Little</label><br/>
+                <input type="radio" name="q9" value="2" id="q92"><label for="q92">Somewhat</label><br/>
+                <input type="radio" name="q9" value="3" id="q93"><label for="q93">Quite a bit</label><br/>
+                <input type="radio" name="q9" value="4" id="q94"><label for="q94">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Heaviness:</li>
+                <ul class="answers">
+                <input type="radio" name="q10" value="0" id="q100"><label for="q100">None</label><br/>
+                <input type="radio" name="q10" value="1" id="q101"><label for="q101">A Little</label><br/>
+                <input type="radio" name="q10" value="2" id="q102"><label for="q102">Somewhat</label><br/>
+                <input type="radio" name="q10" value="3" id="q103"><label for="q103">Quite a bit</label><br/>
+                <input type="radio" name="q10" value="4" id="q104"><label for="q104">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Toughness:</li>
+                <ul class="answers">
+                <input type="radio" name="q11" value="0" id="q110"><label for="q110">None</label><br/>
+                <input type="radio" name="q11" value="1" id="q111"><label for="q111">A Little</label><br/>
+                <input type="radio" name="q11" value="2" id="q112"><label for="q112">Somewhat</label><br/>
+                <input type="radio" name="q11" value="3" id="q113"><label for="q113">Quite a bit</label><br/>
+                <input type="radio" name="q11" value="4" id="q114"><label for="q114">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Stiffness:</li>
+                <ul class="answers">
+                <input type="radio" name="q12" value="0" id="q120"><label for="q120">None</label><br/>
+                <input type="radio" name="q12" value="1" id="q121"><label for="q121">A Little</label><br/>
+                <input type="radio" name="q12" value="2" id="q122"><label for="q122">Somewhat</label><br/>
+                <input type="radio" name="q12" value="3" id="q123"><label for="q123">Quite a bit</label><br/>
+                <input type="radio" name="q12" value="4" id="q124"><label for="q124">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Hotness/Increased temperature:</li>
+                <ul class="answers">
+                <input type="radio" name="q13" value="0" id="q130"><label for="q130">None</label><br/>
+                <input type="radio" name="q13" value="1" id="q131"><label for="q131">A Little</label><br/>
+                <input type="radio" name="q13" value="2" id="q132"><label for="q132">Somewhat</label><br/>
+                <input type="radio" name="q13" value="3" id="q133"><label for="q133">Quite a bit</label><br/>
+                <input type="radio" name="q13" value="4" id="q134"><label for="q134">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Redness:</li>
+                <ul class="answers">
+                <input type="radio" name="q14" value="0" id="q140"><label for="q140">None</label><br/>
+                <input type="radio" name="q14" value="1" id="q141"><label for="q141">A Little</label><br/>
+                <input type="radio" name="q14" value="2" id="q142"><label for="q142">Somewhat</label><br/>
+                <input type="radio" name="q14" value="3" id="q143"><label for="q143">Quite a bit</label><br/>
+                <input type="radio" name="q14" value="4" id="q144"><label for="q144">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Blistering:</li>
+                <ul class="answers">
+                <input type="radio" name="q15" value="0" id="q150"><label for="q150">None</label><br/>
+                <input type="radio" name="q15" value="1" id="q151"><label for="q151">A Little</label><br/>
+                <input type="radio" name="q15" value="2" id="q152"><label for="q152">Somewhat</label><br/>
+                <input type="radio" name="q15" value="3" id="q153"><label for="q153">Quite a bit</label><br/>
+                <input type="radio" name="q15" value="4" id="q154"><label for="q154">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Numbness:</li>
+                <ul class="answers">
+                <input type="radio" name="q16" value="0" id="q160"><label for="q160">None</label><br/>
+                <input type="radio" name="q16" value="1" id="q161"><label for="q161">A Little</label><br/>
+                <input type="radio" name="q16" value="2" id="q162"><label for="q162">Somewhat</label><br/>
+                <input type="radio" name="q16" value="3" id="q163"><label for="q163">Quite a bit</label><br/>
+                <input type="radio" name="q16" value="4" id="q164"><label for="q164">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Burning:</li>
+                <ul class="answers">
+                <input type="radio" name="q17" value="0" id="q170"><label for="q170">None</label><br/>
+                <input type="radio" name="q17" value="1" id="q171"><label for="q171">A Little</label><br/>
+                <input type="radio" name="q17" value="2" id="q172"><label for="q172">Somewhat</label><br/>
+                <input type="radio" name="q17" value="3" id="q173"><label for="q173">Quite a bit</label><br/>
+                <input type="radio" name="q17" value="4" id="q174"><label for="q174">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Stabbing Pain:</li>
+                <ul class="answers">
+                <input type="radio" name="q18" value="0" id="q180"><label for="q180">None</label><br/>
+                <input type="radio" name="q18" value="1" id="q181"><label for="q181">A Little</label><br/>
+                <input type="radio" name="q18" value="2" id="q182"><label for="q182">Somewhat</label><br/>
+                <input type="radio" name="q18" value="3" id="q183"><label for="q183">Quite a bit</label><br/>
+                <input type="radio" name="q18" value="4" id="q184"><label for="q184">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Tingling:</li>
+                <ul class="answers">
+                <input type="radio" name="q19" value="0" id="q190"><label for="q190">None</label><br/>
+                <input type="radio" name="q19" value="1" id="q191"><label for="q191">A Little</label><br/>
+                <input type="radio" name="q19" value="2" id="q192"><label for="q192">Somewhat</label><br/>
+                <input type="radio" name="q19" value="3" id="q193"><label for="q193">Quite a bit</label><br/>
+                <input type="radio" name="q19" value="4" id="q194"><label for="q194">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Fatigue:</li>
+                <ul class="answers">
+                <input type="radio" name="q20" value="0" id="q200"><label for="q200">None</label><br/>
+                <input type="radio" name="q20" value="1" id="q201"><label for="q201">A Little</label><br/>
+                <input type="radio" name="q20" value="2" id="q202"><label for="q202">Somewhat</label><br/>
+                <input type="radio" name="q20" value="3" id="q203"><label for="q203">Quite a bit</label><br/>
+                <input type="radio" name="q20" value="4" id="q204"><label for="q204">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Weakness:</li>
+                <ul class="answers">
+                <input type="radio" name="q21" value="0" id="q210"><label for="q210">None</label><br/>
+                <input type="radio" name="q21" value="1" id="q211"><label for="q211">A Little</label><br/>
+                <input type="radio" name="q21" value="2" id="q212"><label for="q212">Somewhat</label><br/>
+                <input type="radio" name="q21" value="3" id="q213"><label for="q213">Quite a bit</label><br/>
+                <input type="radio" name="q21" value="4" id="q214"><label for="q214">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Pocket fluid:</li>
+                <ul class="answers">
+                <input type="radio" name="q22" value="0" id="q220"><label for="q220">None</label><br/>
+                <input type="radio" name="q22" value="1" id="q221"><label for="q221">A Little</label><br/>
+                <input type="radio" name="q22" value="2" id="q222"><label for="q222">Somewhat</label><br/>
+                <input type="radio" name="q22" value="3" id="q223"><label for="q223">Quite a bit</label><br/>
+                <input type="radio" name="q22" value="4" id="q224"><label for="q224">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Limited movement in shoulder:</li>
+                <ul class="answers">
+                <input type="radio" name="q23" value="0" id="q230"><label for="q230">None</label><br/>
+                <input type="radio" name="q23" value="1" id="q231"><label for="q231">A Little</label><br/>
+                <input type="radio" name="q23" value="2" id="q232"><label for="q232">Somewhat</label><br/>
+                <input type="radio" name="q23" value="3" id="q233"><label for="q233">Quite a bit</label><br/>
+                <input type="radio" name="q23" value="4" id="q234"><label for="q234">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Limited movement in elbow:</li>
+                <ul class="answers">
+                <input type="radio" name="q24" value="0" id="q240"><label for="q240">None</label><br/>
+                <input type="radio" name="q24" value="1" id="q241"><label for="q241">A Little</label><br/>
+                <input type="radio" name="q24" value="2" id="q242"><label for="q242">Somewhat</label><br/>
+                <input type="radio" name="q24" value="3" id="q243"><label for="q243">Quite a bit</label><br/>
+                <input type="radio" name="q24" value="4" id="q244"><label for="q244">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Limited movement in wrist:</li>
+                <ul class="answers">
+                <input type="radio" name="q25" value="0" id="q250"><label for="q250">None</label><br/>
+                <input type="radio" name="q25" value="1" id="q251"><label for="q251">A Little</label><br/>
+                <input type="radio" name="q25" value="2" id="q252"><label for="q252">Somewhat</label><br/>
+                <input type="radio" name="q25" value="3" id="q253"><label for="q253">Quite a bit</label><br/>
+                <input type="radio" name="q25" value="4" id="q254"><label for="q254">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Limited movement in finger:</li>
+                <ul class="answers">
+                <input type="radio" name="q26" value="0" id="q260"><label for="q260">None</label><br/>
+                <input type="radio" name="q26" value="1" id="q261"><label for="q261">A Little</label><br/>
+                <input type="radio" name="q26" value="2" id="q262"><label for="q262">Somewhat</label><br/>
+                <input type="radio" name="q26" value="3" id="q263"><label for="q263">Quite a bit</label><br/>
+                <input type="radio" name="q26" value="4" id="q264"><label for="q264">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Limited movement in arm:</li>
+                <ul class="answers">
+                <input type="radio" name="q27" value="0" id="q270"><label for="q270">None</label><br/>
+                <input type="radio" name="q27" value="1" id="q271"><label for="q271">A Little</label><br/>
+                <input type="radio" name="q27" value="2" id="q272"><label for="q272">Somewhat</label><br/>
+                <input type="radio" name="q27" value="3" id="q273"><label for="q273">Quite a bit</label><br/>
+                <input type="radio" name="q27" value="4" id="q274"><label for="q274">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Sentinel lymph nodes biopsy:</li>
+                <ul class="answers">
+                <input type="radio" name="q28" value="0" id="q280"><label for="q280">None</label><br/>
+                <input type="radio" name="q28" value="1" id="q281"><label for="q281">A Little</label><br/>
+                <input type="radio" name="q28" value="2" id="q282"><label for="q282">Somewhat</label><br/>
+                <input type="radio" name="q28" value="3" id="q283"><label for="q283">Quite a bit</label><br/>
+                <input type="radio" name="q28" value="4" id="q284"><label for="q284">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Auxillary lymph node dissection:</li>
+                <ul class="answers">
+                <input type="radio" name="q29" value="0" id="q290"><label for="q290">None</label><br/>
+                <input type="radio" name="q29" value="1" id="q291"><label for="q291">A Little</label><br/>
+                <input type="radio" name="q29" value="2" id="q292"><label for="q292">Somewhat</label><br/>
+                <input type="radio" name="q29" value="3" id="q293"><label for="q293">Quite a bit</label><br/>
+                <input type="radio" name="q29" value="4" id="q294"><label for="q294">Very Severe</label><br/>
+                </ul>
+                <li class="question"> Radiation:</li>
+                <ul class="answers">
+                <input type="radio" name="q30" value="0" id="q300"><label for="q300">No</label><br/>
+                <input type="radio" name="q30" value="1" id="q301"><label for="q301">Yes</label><br/>
+                </ul>
+                <li class="question"> Chemotherapy:</li>
+                <ul class="answers">
+                <input type="radio" name="q31" value="0" id="q310"><label for="q310">No</label><br/>
+                <input type="radio" name="q31" value="1" id="q311"><label for="q311">Yes</label><br/>
+                </ul>
+            </ol>
+        <center><button type="button" value="Submit" onclick="getResult()"> Submit </button></center>
+
+        </form>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="ModalContent">Some text in the Modal..</p>
+        <div id="slidecontainer">
+          <input type="range" min="0" max="2" value="0" class="slider" id="lymphmeter" disabled="true">
+        </div>
+      </div>
+    </div>
+</div>
+
+<style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#slidecontainer {
+    width: 100%;
+    display: none;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: red; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left, green, yellow, red); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, green, yellow, red); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, green, yellow, red); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right,  green, yellow, red); /* Standard syntax (must be last) */
+}
+    outline: none;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 30px;
+    background: gray;
+    pointer-events: none;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    pointer-events: none;
+}
+
+#main {
+    width: 60%;
+    margin-left: 20%;
+    padding: 0px 10px;
+    background: #e4e4e4;
+}
+</style>
+
+
+<script>
+var modal = document.getElementById('myModal');
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+    document.getElementById("slidecontainer").style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        document.getElementById("slidecontainer").style.display = "none";
+    }
+}
+
+function setDialogText(text) {
+    var p = document.getElementById("ModalContent");
+    if(p) {
+        p.innerHTML = text;
+    }
+}
+
+//get values from the form
+function getValues() {
+    var num_symptoms = 31;
+    var query_str = "";
+    var p = {};
+    
+    var inputs = document.getElementsByTagName("input");
+    
+    for (var a in inputs) {
+        if(inputs[a].type == "radio" && inputs[a].checked)
+            p[inputs[a].name] = inputs[a].value;
+    }
+
+    for (var a in inputs) {
+        if(inputs[a].type == "radio" && !inputs[a].checked)
+            if(typeof p[inputs[a].name] == "undefined") {
+                setDialogText("Please select a value for " + inputs[a].name)
+                modal.style.display = "block";
+                return false;
+                // p[inputs[a].name] = 0;
+            }
+    }
+    
+    for(key in p)
+        query_str += key + "=" + p[key] + "&";
+    
+    return query_str.substr(0, query_str.length - 1);
+}
+
+function reqListener () {
+  var val = this.responseText;
+  var meter = document.getElementById('lymphmeter');
+  meter.value = val;
+  document.getElementById("slidecontainer").style.display = "block";
+
+  setDialogText("Lymphmeter Prediction for Proposed data : " +  this.responseText);
+}
+
+
+function getResult() {
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", reqListener);
+    var qs = getValues();
+    if(!qs) {
+        return;
+    }
+    setDialogText("Please wait... Fetching results.");
+    modal.style.display = "block";
+    oReq.open("GET", "http://localhost:5000?" + qs);
+    oReq.send();
+}
+
+</script>
+
+</body>
+</html>
