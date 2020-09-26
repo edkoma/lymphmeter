@@ -8,5 +8,5 @@ mock==2.0.0
 httpie==0.9.9
 pinocchio==0.4.2
 honcho==1.0.1
-tensorflow==1.4.0
+tensorflow==1.15.4
 h5py==2.7.1
